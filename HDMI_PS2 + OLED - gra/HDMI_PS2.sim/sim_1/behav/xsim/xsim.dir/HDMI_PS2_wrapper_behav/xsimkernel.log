@@ -1,0 +1,7 @@
+Running: xsim.dir/HDMI_PS2_wrapper_behav/xsimk.exe -simmode gui -wdb HDMI_PS2_wrapper_behav.wdb -simrunnum 0 -socket 61376
+Design successfully loaded
+Design Loading Memory Usage: 11376 KB (Peak: 11376 KB)
+Design Loading CPU Usage: 92 ms
+Simulation completed
+Simulation Memory Usage: 12648 KB (Peak: 12648 KB)
+Simulation CPU Usage: 108 ms

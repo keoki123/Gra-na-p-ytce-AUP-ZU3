@@ -1,0 +1,230 @@
+#-----------------------------------------------------------
+# Vivado v2025.1 (64-bit)
+# SW Build 6140274 on Thu May 22 00:12:29 MDT 2025
+# IP Build 6138677 on Thu May 22 03:10:11 MDT 2025
+# SharedData Build 6139179 on Tue May 20 17:58:58 MDT 2025
+# Start of session at: Mon Apr 27 10:06:30 2026
+# Process ID         : 18440
+# Current directory  : C:/Users/lab/Desktop/HDMI_PS2 ----/HDMI_PS2.runs/HDMI_PS2_OLED_ASCII_0_0_synth_1
+# Command line       : vivado.exe -log HDMI_PS2_OLED_ASCII_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source HDMI_PS2_OLED_ASCII_0_0.tcl
+# Log file           : C:/Users/lab/Desktop/HDMI_PS2 ----/HDMI_PS2.runs/HDMI_PS2_OLED_ASCII_0_0_synth_1/HDMI_PS2_OLED_ASCII_0_0.vds
+# Journal file       : C:/Users/lab/Desktop/HDMI_PS2 ----/HDMI_PS2.runs/HDMI_PS2_OLED_ASCII_0_0_synth_1\vivado.jou
+# Running On         : Lab016-05
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : Intel(R) Core(TM) i7-8700 CPU @ 3.20GHz
+# CPU Frequency      : 3192 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 17030 MB
+# Swap memory        : 2608 MB
+# Total Virtual      : 19638 MB
+# Available Virtual  : 13086 MB
+#-----------------------------------------------------------
+Sourcing tcl script 'C:/Users/lab/AppData/Roaming/Xilinx/Vivado/Vivado_init.tcl'
+source HDMI_PS2_OLED_ASCII_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:08 . Memory (MB): peak = 503.316 ; gain = 222.840
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Xilinx/IP_Repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/2025.1/Vivado/data/ip'.
+Command: synth_design -top HDMI_PS2_OLED_ASCII_0_0 -part xczu3eg-sfvc784-2-e -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg'
+INFO: [Device 21-403] Loading part xczu3eg-sfvc784-2-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 6 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 18560
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1674.527 ; gain = 199.234
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'HDMI_PS2_OLED_ASCII_0_0' [c:/Users/lab/Desktop/HDMI_PS2 ----/HDMI_PS2.gen/sources_1/bd/HDMI_PS2/ip/HDMI_PS2_OLED_ASCII_0_0/synth/HDMI_PS2_OLED_ASCII_0_0.vhd:68]
+INFO: [Synth 8-3491] module 'OLED_ASCII_wrap' declared at 'c:/Users/lab/Desktop/HDMI_PS2 ----/HDMI_PS2.gen/sources_1/bd/HDMI_PS2/ipshared/fd0d/OLED_ASCII_wrap.vhd:4' bound to instance 'U0' of component 'OLED_ASCII_wrap' [c:/Users/lab/Desktop/HDMI_PS2 ----/HDMI_PS2.gen/sources_1/bd/HDMI_PS2/ip/HDMI_PS2_OLED_ASCII_0_0/synth/HDMI_PS2_OLED_ASCII_0_0.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'OLED_ASCII_wrap' [c:/Users/lab/Desktop/HDMI_PS2 ----/HDMI_PS2.gen/sources_1/bd/HDMI_PS2/ipshared/fd0d/OLED_ASCII_wrap.vhd:15]
+INFO: [Synth 8-637] synthesizing blackbox instance 'wrap' of component 'OLED_ASCII' [c:/Users/lab/Desktop/HDMI_PS2 ----/HDMI_PS2.gen/sources_1/bd/HDMI_PS2/ipshared/fd0d/OLED_ASCII_wrap.vhd:30]
+INFO: [Synth 8-256] done synthesizing module 'OLED_ASCII_wrap' (0#1) [c:/Users/lab/Desktop/HDMI_PS2 ----/HDMI_PS2.gen/sources_1/bd/HDMI_PS2/ipshared/fd0d/OLED_ASCII_wrap.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'HDMI_PS2_OLED_ASCII_0_0' (0#1) [c:/Users/lab/Desktop/HDMI_PS2 ----/HDMI_PS2.gen/sources_1/bd/HDMI_PS2/ip/HDMI_PS2_OLED_ASCII_0_0/synth/HDMI_PS2_OLED_ASCII_0_0.vhd:68]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1782.008 ; gain = 306.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1782.008 ; gain = 306.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1782.008 ; gain = 306.715
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1782.008 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1793.820 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1807.258 ; gain = 13.438
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1807.258 ; gain = 331.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu3eg-sfvc784-2-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1807.258 ; gain = 331.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1807.258 ; gain = 331.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1807.258 ; gain = 331.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 360 (col length:72)
+BRAMs: 432 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1807.258 ; gain = 331.965
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 2507.434 ; gain = 1032.141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 2507.434 ; gain = 1032.141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 2517.020 ; gain = 1041.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 2752.629 ; gain = 1277.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 2752.629 ; gain = 1277.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 2752.629 ; gain = 1277.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 2752.629 ; gain = 1277.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 2752.629 ; gain = 1277.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 2752.629 ; gain = 1277.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |OLED_ASCII    |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+----------------+------+
+|      |Cell            |Count |
++------+----------------+------+
+|1     |OLED_ASCII_bbox |     1|
++------+----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 2752.629 ; gain = 1277.336
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:37 . Memory (MB): peak = 2752.629 ; gain = 1252.086
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 2752.629 ; gain = 1277.336
+INFO: [Project 1-571] Translating synthesized netlist
+Parsing EDIF File [c:/Users/lab/Desktop/HDMI_PS2 ----/HDMI_PS2.gen/sources_1/bd/HDMI_PS2/ip/HDMI_PS2_OLED_ASCII_0_0/OLED_ASCII.edf]
+Finished Parsing EDIF File [c:/Users/lab/Desktop/HDMI_PS2 ----/HDMI_PS2.gen/sources_1/bd/HDMI_PS2/ip/HDMI_PS2_OLED_ASCII_0_0/OLED_ASCII.edf]
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2752.629 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2752.629 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 2 instances
+  RAM32M16 => RAM32M16 (RAMD32(x14), RAMS32(x2)): 1 instance 
+
+Synth Design complete | Checksum: 20432c42
+INFO: [Common 17-83] Releasing license: Synthesis
+26 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 2752.629 ; gain = 2194.660
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2752.629 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/lab/Desktop/HDMI_PS2 ----/HDMI_PS2.runs/HDMI_PS2_OLED_ASCII_0_0_synth_1/HDMI_PS2_OLED_ASCII_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP HDMI_PS2_OLED_ASCII_0_0, cache-ID = 89e6423f454fe112
+INFO: [Coretcl 2-1174] Renamed 2 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2752.629 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/lab/Desktop/HDMI_PS2 ----/HDMI_PS2.runs/HDMI_PS2_OLED_ASCII_0_0_synth_1/HDMI_PS2_OLED_ASCII_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file HDMI_PS2_OLED_ASCII_0_0_utilization_synth.rpt -pb HDMI_PS2_OLED_ASCII_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 27 10:07:35 2026...

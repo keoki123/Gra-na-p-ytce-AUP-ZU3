@@ -1,0 +1,736 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x6AB8C0E4F2C4397A",
+      "device": "xczu3eg-sfvc784-2-e",
+      "gen_directory": "../../../../HDMI_PS2.gen/sources_1/bd/HDMI_PS2",
+      "name": "HDMI_PS2",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2025.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "HDMI_TX_0": "",
+      "VideoTiming_0": "",
+      "clk_wiz_0": "",
+      "PS2_Mouse_0": "",
+      "OLED_ASCII_0": "",
+      "MouseCtrl_0": "",
+      "OLED_GameInfo_0": "",
+      "ImgGen2_0": ""
+    },
+    "interface_ports": {
+      "clk_100mhz": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:diff_clock:1.0",
+        "vlnv": "xilinx.com:interface:diff_clock_rtl:1.0",
+        "parameters": {
+          "CAN_DEBUG": {
+            "value": "false",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          }
+        },
+        "port_maps": {
+          "CLK_N": {
+            "physical_name": "clk_100mhz_clk_n",
+            "direction": "I"
+          },
+          "CLK_P": {
+            "physical_name": "clk_100mhz_clk_p",
+            "direction": "I"
+          }
+        }
+      }
+    },
+    "ports": {
+      "HDMI_D0_P": {
+        "direction": "O"
+      },
+      "HDMI_D0_N": {
+        "direction": "O"
+      },
+      "HDMI_D1_P": {
+        "direction": "O"
+      },
+      "HDMI_D1_N": {
+        "direction": "O"
+      },
+      "HDMI_D2_P": {
+        "direction": "O"
+      },
+      "HDMI_D2_N": {
+        "direction": "O"
+      },
+      "HDMI_CK_P": {
+        "direction": "O"
+      },
+      "HDMI_CK_N": {
+        "direction": "O"
+      },
+      "PS2B_Data": {
+        "direction": "IO"
+      },
+      "PS2B_Clk": {
+        "direction": "IO"
+      },
+      "OLED_SDA": {
+        "direction": "IO"
+      },
+      "OLED_SCL": {
+        "direction": "IO"
+      },
+      "PL_USER_PB_3": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "HDMI_TX_0": {
+        "vlnv": "JS_WUST:UCiSW:HDMI_TX:1.0",
+        "ip_revision": "2",
+        "xci_name": "HDMI_PS2_HDMI_TX_0_0",
+        "xci_path": "ip\\HDMI_PS2_HDMI_TX_0_0\\HDMI_PS2_HDMI_TX_0_0.xci",
+        "inst_hier_path": "HDMI_TX_0",
+        "has_run_ip_tcl": "true"
+      },
+      "VideoTiming_0": {
+        "vlnv": "xilinx.com:module_ref:VideoTiming:1.0",
+        "ip_revision": "1",
+        "xci_name": "HDMI_PS2_VideoTiming_0_0",
+        "xci_path": "ip\\HDMI_PS2_VideoTiming_0_0\\HDMI_PS2_VideoTiming_0_0.xci",
+        "inst_hier_path": "VideoTiming_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "VideoTiming",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "pixClk": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "25000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "HDMI_PS2_clk_wiz_0_0_Clk_25MHz",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "ResetN": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "DE": {
+            "direction": "O"
+          },
+          "HSync": {
+            "direction": "O"
+          },
+          "VSync": {
+            "direction": "O"
+          },
+          "PosX": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "PosY": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          }
+        }
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "ip_revision": "16",
+        "xci_name": "HDMI_PS2_clk_wiz_0_0",
+        "xci_path": "ip\\HDMI_PS2_clk_wiz_0_0\\HDMI_PS2_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "has_run_ip_tcl": "true",
+        "parameters": {
+          "CLKOUT1_JITTER": {
+            "value": "175.402"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "98.575"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "25.000"
+          },
+          "CLKOUT2_JITTER": {
+            "value": "125.247"
+          },
+          "CLKOUT2_PHASE_ERROR": {
+            "value": "98.575"
+          },
+          "CLKOUT2_REQUESTED_OUT_FREQ": {
+            "value": "125.000"
+          },
+          "CLKOUT2_USED": {
+            "value": "true"
+          },
+          "CLKOUT3_JITTER": {
+            "value": "130.958"
+          },
+          "CLKOUT3_PHASE_ERROR": {
+            "value": "98.575"
+          },
+          "CLKOUT3_USED": {
+            "value": "true"
+          },
+          "CLK_IN1_BOARD_INTERFACE": {
+            "value": "clk_100mhz"
+          },
+          "CLK_OUT1_PORT": {
+            "value": "Clk_25MHz"
+          },
+          "CLK_OUT2_PORT": {
+            "value": "Clk_125Mhz"
+          },
+          "CLK_OUT3_PORT": {
+            "value": "Clk_100MHz"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "10.000"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "40.000"
+          },
+          "MMCM_CLKOUT1_DIVIDE": {
+            "value": "8"
+          },
+          "MMCM_CLKOUT2_DIVIDE": {
+            "value": "10"
+          },
+          "NUM_OUT_CLKS": {
+            "value": "3"
+          },
+          "PRIM_SOURCE": {
+            "value": "Differential_clock_capable_pin"
+          },
+          "USE_RESET": {
+            "value": "false"
+          }
+        }
+      },
+      "PS2_Mouse_0": {
+        "vlnv": "JS_WUST:UCiSW:PS2_Mouse:1.0",
+        "ip_revision": "1",
+        "xci_name": "HDMI_PS2_PS2_Mouse_0_0",
+        "xci_path": "ip\\HDMI_PS2_PS2_Mouse_0_0\\HDMI_PS2_PS2_Mouse_0_0.xci",
+        "inst_hier_path": "PS2_Mouse_0",
+        "has_run_ip_tcl": "true"
+      },
+      "OLED_ASCII_0": {
+        "vlnv": "JS_WUST:UCiSW:OLED_ASCII:1.0",
+        "ip_revision": "1",
+        "xci_name": "HDMI_PS2_OLED_ASCII_0_0",
+        "xci_path": "ip\\HDMI_PS2_OLED_ASCII_0_0\\HDMI_PS2_OLED_ASCII_0_0.xci",
+        "inst_hier_path": "OLED_ASCII_0",
+        "has_run_ip_tcl": "true"
+      },
+      "MouseCtrl_0": {
+        "vlnv": "xilinx.com:module_ref:MouseCtrl:1.0",
+        "ip_revision": "1",
+        "xci_name": "HDMI_PS2_MouseCtrl_0_1",
+        "xci_path": "ip\\HDMI_PS2_MouseCtrl_0_1\\HDMI_PS2_MouseCtrl_0_1.xci",
+        "inst_hier_path": "MouseCtrl_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "MouseCtrl",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "RstN",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "HDMI_PS2_clk_wiz_0_0_Clk_25MHz",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "RstN": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "Data_Rdy": {
+            "direction": "I"
+          },
+          "B1_Status": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "B2_X": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "B3_Y": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "CursorX": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "CursorY": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "LeftBtn": {
+            "direction": "O"
+          }
+        }
+      },
+      "OLED_GameInfo_0": {
+        "vlnv": "xilinx.com:module_ref:OLED_GameInfo:1.0",
+        "ip_revision": "1",
+        "xci_name": "HDMI_PS2_OLED_GameInfo_0_0",
+        "xci_path": "ip\\HDMI_PS2_OLED_GameInfo_0_0\\HDMI_PS2_OLED_GameInfo_0_0.xci",
+        "inst_hier_path": "OLED_GameInfo_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "OLED_GameInfo",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "RstN",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "HDMI_PS2_clk_wiz_0_0_Clk_25MHz",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "RstN": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "GameStateIn": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Busy": {
+            "direction": "I"
+          },
+          "ASCII": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
+          },
+          "ASCII_WE": {
+            "direction": "O"
+          },
+          "ClrScr": {
+            "direction": "O"
+          }
+        }
+      },
+      "ImgGen2_0": {
+        "vlnv": "xilinx.com:module_ref:ImgGen2:1.0",
+        "ip_revision": "1",
+        "xci_name": "HDMI_PS2_ImgGen2_0_0",
+        "xci_path": "ip\\HDMI_PS2_ImgGen2_0_0\\HDMI_PS2_ImgGen2_0_0.xci",
+        "inst_hier_path": "ImgGen2_0",
+        "has_run_ip_tcl": "true",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ImgGen2",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "RstN",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "25000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "HDMI_PS2_clk_wiz_0_0_Clk_25MHz",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "RstN": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "PosX": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "PosY": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "CursorX": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "CursorY": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "LeftBtn": {
+            "direction": "I"
+          },
+          "InitOK": {
+            "direction": "I"
+          },
+          "GameStateOut": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "R": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "G": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "B": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "CLK_IN1_D_0_1": {
+        "interface_ports": [
+          "clk_100mhz",
+          "clk_wiz_0/CLK_IN1_D"
+        ]
+      }
+    },
+    "nets": {
+      "HDMI_TX_0_HDMI_CK_N": {
+        "ports": [
+          "HDMI_TX_0/HDMI_CK_N",
+          "HDMI_CK_N"
+        ]
+      },
+      "HDMI_TX_0_HDMI_CK_P": {
+        "ports": [
+          "HDMI_TX_0/HDMI_CK_P",
+          "HDMI_CK_P"
+        ]
+      },
+      "HDMI_TX_0_HDMI_D0_N": {
+        "ports": [
+          "HDMI_TX_0/HDMI_D0_N",
+          "HDMI_D0_N"
+        ]
+      },
+      "HDMI_TX_0_HDMI_D0_P": {
+        "ports": [
+          "HDMI_TX_0/HDMI_D0_P",
+          "HDMI_D0_P"
+        ]
+      },
+      "HDMI_TX_0_HDMI_D1_N": {
+        "ports": [
+          "HDMI_TX_0/HDMI_D1_N",
+          "HDMI_D1_N"
+        ]
+      },
+      "HDMI_TX_0_HDMI_D1_P": {
+        "ports": [
+          "HDMI_TX_0/HDMI_D1_P",
+          "HDMI_D1_P"
+        ]
+      },
+      "HDMI_TX_0_HDMI_D2_N": {
+        "ports": [
+          "HDMI_TX_0/HDMI_D2_N",
+          "HDMI_D2_N"
+        ]
+      },
+      "HDMI_TX_0_HDMI_D2_P": {
+        "ports": [
+          "HDMI_TX_0/HDMI_D2_P",
+          "HDMI_D2_P"
+        ]
+      },
+      "ImgGen2_0_B": {
+        "ports": [
+          "ImgGen2_0/B",
+          "HDMI_TX_0/B"
+        ]
+      },
+      "ImgGen2_0_G": {
+        "ports": [
+          "ImgGen2_0/G",
+          "HDMI_TX_0/G"
+        ]
+      },
+      "ImgGen2_0_GameStateOut": {
+        "ports": [
+          "ImgGen2_0/GameStateOut",
+          "OLED_GameInfo_0/GameStateIn"
+        ]
+      },
+      "ImgGen2_0_R": {
+        "ports": [
+          "ImgGen2_0/R",
+          "HDMI_TX_0/R"
+        ]
+      },
+      "MouseCtrl_0_CursorX": {
+        "ports": [
+          "MouseCtrl_0/CursorX",
+          "ImgGen2_0/CursorX"
+        ]
+      },
+      "MouseCtrl_0_CursorY": {
+        "ports": [
+          "MouseCtrl_0/CursorY",
+          "ImgGen2_0/CursorY"
+        ]
+      },
+      "MouseCtrl_0_LeftBtn": {
+        "ports": [
+          "MouseCtrl_0/LeftBtn",
+          "ImgGen2_0/LeftBtn"
+        ]
+      },
+      "Net": {
+        "ports": [
+          "PS2B_Data",
+          "PS2_Mouse_0/PS2_Data"
+        ]
+      },
+      "Net1": {
+        "ports": [
+          "PS2B_Clk",
+          "PS2_Mouse_0/PS2_Clk"
+        ]
+      },
+      "Net2": {
+        "ports": [
+          "OLED_SDA",
+          "OLED_ASCII_0/OLED_SDA"
+        ]
+      },
+      "Net3": {
+        "ports": [
+          "OLED_SCL",
+          "OLED_ASCII_0/OLED_SCL"
+        ]
+      },
+      "OLED_ASCII_0_Busy": {
+        "ports": [
+          "OLED_ASCII_0/Busy",
+          "OLED_GameInfo_0/Busy"
+        ]
+      },
+      "OLED_GameInfo_0_ASCII": {
+        "ports": [
+          "OLED_GameInfo_0/ASCII",
+          "OLED_ASCII_0/ASCII"
+        ]
+      },
+      "OLED_GameInfo_0_ASCII_WE": {
+        "ports": [
+          "OLED_GameInfo_0/ASCII_WE",
+          "OLED_ASCII_0/ASCII_WE"
+        ]
+      },
+      "OLED_GameInfo_0_ClrScr": {
+        "ports": [
+          "OLED_GameInfo_0/ClrScr",
+          "OLED_ASCII_0/ClrScr"
+        ]
+      },
+      "PS2_Mouse_0_B1_Status": {
+        "ports": [
+          "PS2_Mouse_0/B1_Status",
+          "MouseCtrl_0/B1_Status"
+        ]
+      },
+      "PS2_Mouse_0_B2_X": {
+        "ports": [
+          "PS2_Mouse_0/B2_X",
+          "MouseCtrl_0/B2_X"
+        ]
+      },
+      "PS2_Mouse_0_B3_Y": {
+        "ports": [
+          "PS2_Mouse_0/B3_Y",
+          "MouseCtrl_0/B3_Y"
+        ]
+      },
+      "PS2_Mouse_0_Data_Rdy": {
+        "ports": [
+          "PS2_Mouse_0/Data_Rdy",
+          "MouseCtrl_0/Data_Rdy"
+        ]
+      },
+      "PS2_Mouse_0_InitOK": {
+        "ports": [
+          "PS2_Mouse_0/InitOK",
+          "ImgGen2_0/InitOK"
+        ]
+      },
+      "Reset_0_1": {
+        "ports": [
+          "PL_USER_PB_3",
+          "PS2_Mouse_0/Reset"
+        ]
+      },
+      "VideoTiming_0_DE": {
+        "ports": [
+          "VideoTiming_0/DE",
+          "HDMI_TX_0/DE"
+        ]
+      },
+      "VideoTiming_0_HSync": {
+        "ports": [
+          "VideoTiming_0/HSync",
+          "HDMI_TX_0/HSync"
+        ]
+      },
+      "VideoTiming_0_PosX": {
+        "ports": [
+          "VideoTiming_0/PosX",
+          "ImgGen2_0/PosX"
+        ]
+      },
+      "VideoTiming_0_PosY": {
+        "ports": [
+          "VideoTiming_0/PosY",
+          "ImgGen2_0/PosY"
+        ]
+      },
+      "VideoTiming_0_VSync": {
+        "ports": [
+          "VideoTiming_0/VSync",
+          "HDMI_TX_0/VSync"
+        ]
+      },
+      "clk_wiz_0_Clk_100MHz": {
+        "ports": [
+          "clk_wiz_0/Clk_100MHz",
+          "PS2_Mouse_0/Clk_100MHz",
+          "MouseCtrl_0/Clk",
+          "OLED_ASCII_0/Clk_100MHz",
+          "OLED_GameInfo_0/Clk"
+        ]
+      },
+      "clk_wiz_0_Clk_125Mhz": {
+        "ports": [
+          "clk_wiz_0/Clk_125Mhz",
+          "HDMI_TX_0/pxClkX5"
+        ]
+      },
+      "clk_wiz_0_Clk_25MHz": {
+        "ports": [
+          "clk_wiz_0/Clk_25MHz",
+          "VideoTiming_0/pixClk",
+          "HDMI_TX_0/pxClk",
+          "ImgGen2_0/Clk"
+        ]
+      },
+      "clk_wiz_0_locked": {
+        "ports": [
+          "clk_wiz_0/locked",
+          "MouseCtrl_0/RstN",
+          "VideoTiming_0/ResetN",
+          "HDMI_TX_0/ResetN",
+          "ImgGen2_0/RstN",
+          "OLED_GameInfo_0/RstN"
+        ]
+      }
+    }
+  }
+}
